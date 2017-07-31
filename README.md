@@ -1,6 +1,4 @@
-Example
-===========
-Reads color using the TCS34725 RGBC sensor
+Reads color values using the TCS34725 RGBC sensor
 
 Properties
 --------------
@@ -8,7 +6,7 @@ None
 
 Dependencies
 ----------------
-None
+adafruit-tcs34725
 
 Commands
 ----------------
@@ -20,4 +18,7 @@ Any list of signals.
 
 Output
 ---------
-Same list of signals as input.
+red : int representing amount of red light
+green : int representing amount of green light
+blue : int representing amount of blue light
+clear : int representing appoximation of human visible light 

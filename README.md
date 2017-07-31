@@ -1,7 +1,6 @@
 Example
 ===========
-
-What does this block do?
+Reads color using the TCS34725 RGBC sensor
 
 Properties
 --------------

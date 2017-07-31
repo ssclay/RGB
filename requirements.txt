@@ -1,0 +1,2 @@
+Adafruit_TCS34725
+smbus

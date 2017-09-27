@@ -1,29 +1,21 @@
 {
-  "namespace/BlockName": {
-    "Version": "1.0.0",
-    "Description": "Description of the block.",
-    "Output": "Description of block output(s).",
-    "Input": "Description of block input(s).",
-    "Dependencies": [
-      "<List of required dependencies.>"
+  "nio/RGB": {
+    "version": "0.1.0",
+    "description": "Read data from an I2C RGB Sensor",
+    "categories": [
+      "hardware"
     ],
-    "Commands": {
-      "<command1>": {
-        "description": "Required description of the command",
-        "type": "Optional type and other metadata with any key."
-      },
-      "<command2>": {
-        "description": "Required description of the command"
+    "properties": {},
+    "inputs": {
+      "default": {
+        "description": ""
       }
     },
-    "Properties": {
-      "<property1>": {
-        "description": "Required description of the property"
-      },
-      "<property2>": {
-        "default": "Optional metadata with any key.",
-        "description": "Required description of the property"
+    "outputs": {
+      "default": {
+        "description": "Signal with the reading from the RGB Sensor."
       }
-    }
+    },
+    "commands": {}
   }
 }

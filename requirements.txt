@@ -1,2 +1,1 @@
-Adafruit_TCS34725
-smbus
+adafruit-tcs34725

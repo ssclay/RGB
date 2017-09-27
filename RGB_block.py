@@ -13,7 +13,7 @@ class RGB(Block):
         super().__init__()
         self.tcs = None
 
-    def configure(self,context):
+    def configure(self, context):
         super().configure(context)
         self.tcs = Adafruit_TCS34725.TCS34725()
         self.tcs.set_interrupt(False)
@@ -24,7 +24,7 @@ class RGB(Block):
             color_temp = Adafruit_TCS34725.calculate_color_temperature(r, g, b)
             lux = Adafruit_TCS34725.calculate_lux(r, g, b)
 
-        self.notify_signals([ Signal( {"red": r,
-                                       "green" : g,
-                                       "blue" : b,
-                                       "clear" : c })])
+        self.notify_signals([Signal({"red": r,
+                                     "green": g,
+                                     "blue": b,
+                                     "clear": c})])

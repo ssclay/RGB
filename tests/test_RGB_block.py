@@ -27,5 +27,6 @@ class TestRGB(NIOBlockTestCase):
             blk.stop()
             self.assertTrue(mock_get_raw_data.call_count)
             self.assert_num_signals_notified(1)
-        self.assertEqual(
-            self.last_notified[DEFAULT_TERMINAL][0][0].to_dict(), self.output)
+        print([DEFAULT_TERMINAL][0])
+        self.assertDictEqual(
+            self.last_notified[DEFAULT_TERMINAL][0].to_dict(), self.output)

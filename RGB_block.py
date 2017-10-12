@@ -19,12 +19,15 @@ class RGB(Block):
         self.tcs.set_interrupt(False)
 
     def process_signals(self, signals):
+        new_signals = []
         for signal in signals:
+            _signal = signal.to_dict()
             r, g, b, c = self.tcs.get_raw_data()
             color_temp = Adafruit_TCS34725.calculate_color_temperature(r, g, b)
             lux = Adafruit_TCS34725.calculate_lux(r, g, b)
-
-        self.notify_signals([Signal({"red": r,
-                                     "green": g,
-                                     "blue": b,
-                                     "clear": c})])
+            new_signals.append([Signal({"red": r,
+                                        "green": g,
+                                        "blue": b,
+                                        "clear": c,
+                                        **_signal})])
+        self.notify_signals(new_signals)

@@ -25,9 +25,9 @@ class RGB(EnrichSignals, Block):
             r, g, b, c = self.tcs.get_raw_data()
             color_temp = Adafruit_TCS34725.calculate_color_temperature(r, g, b)
             lux = Adafruit_TCS34725.calculate_lux(r, g, b)
-            new_signals = self.get_output_signal({"red": r,
-                                                  "green": g,
-                                                  "blue": b,
-                                                  "clear": c},
-                                                  signal)
+            new_signals = [self.get_output_signal({"red": r,
+                                                   "green": g,
+                                                   "blue": b,
+                                                   "clear": c},
+                                                   signal)]
         self.notify_signals(new_signals)
